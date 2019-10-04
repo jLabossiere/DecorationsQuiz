@@ -77,7 +77,7 @@ namespace DesignQuiz
             if (Month == Months[11])
             {
                 using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"C:\Users\93cru\source\repos\DesignQuiz\records.txt", true))
+                new System.IO.StreamWriter(@".\records.txt", true))
                 {
                     file.WriteLine(fee + "|" + (Months.IndexOf(Month) + 1) + "|0|" + (fee * 2));
                 }
@@ -85,7 +85,7 @@ namespace DesignQuiz
             else if (Month == Months[5] || Month == Months[6])
             {
                 using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"C:\Users\93cru\source\repos\DesignQuiz\records.txt", true))
+                new System.IO.StreamWriter(@".\records.txt", true))
                 {
                     file.WriteLine(fee + "|" + (Months.IndexOf(Month) + 1) + "|25|" + (fee * .75));
                 }
@@ -93,7 +93,7 @@ namespace DesignQuiz
             else
             {
                 using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"C:\Users\93cru\source\repos\DesignQuiz\records.txt", true))
+                new System.IO.StreamWriter(@".\records.txt", true))
                 {
                     file.WriteLine(fee + "|" + (Months.IndexOf(Month) + 1) + "|0|" + fee);
                 }
@@ -104,7 +104,7 @@ namespace DesignQuiz
         public static List<Order> GetOrders()
         {
             List<Order> returnList = new List<Order>();
-            using (StreamReader sr = new StreamReader(@"C:\Users\93cru\source\repos\DesignQuiz\records.txt"))
+            using (StreamReader sr = new StreamReader(@".\records.txt"))
             {
                 string line;
                 // Read and display lines from the file until the end of 

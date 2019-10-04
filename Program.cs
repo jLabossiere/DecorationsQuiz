@@ -107,8 +107,6 @@ namespace DesignQuiz
             using (StreamReader sr = new StreamReader(@".\records.txt"))
             {
                 string line;
-                // Read and display lines from the file until the end of 
-                // the file is reached.
                 while ((line = sr.ReadLine()) != null)
                 {
                     var splitLine = line.Split('|');
